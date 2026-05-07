@@ -352,6 +352,28 @@ a:hover {
     object-fit: cover;
 }
 
+.cover-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-state {
+    text-align: center;
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.loading-state i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
 .hot-card-content {
     padding: 15px;
 }
@@ -690,6 +712,82 @@ a:hover {
     padding: 2px 8px;
     border-radius: 10px;
     font-size: 11px;
+}
+
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-section h4 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-results-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.search-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.search-no-results {
+    text-align: center;
+}
+
+.search-recommendations {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-recommendations h4 {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.recommend-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.recommend-item:hover {
+    transform: translateY(-5px);
+}
+
+.recommend-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.recommend-item span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer {

@@ -1,21 +1,21 @@
 // 漫画网站数据
 const comicSites = [
-    { id: 1, name: '腾讯动漫', url: 'https://v.qq.com/', icon: 'fab fa-tencent-weibo', color: '#1DA4F2', description: '正版漫画平台' },
-    { id: 2, name: '快看漫画', url: 'https://www.kuaikanmanhua.com/', icon: 'fas fa-eye', color: '#FF6B6B', description: '热门漫画聚集地' },
-    { id: 3, name: '哔哩哔哩漫画', url: 'https://manga.bilibili.com/', icon: 'fab fa-bilibili', color: '#FB7299', description: '二次元漫画社区' },
-    { id: 4, name: '漫画台', url: 'https://www.manhuatai.com/', icon: 'fas fa-book-open', color: '#4ECDC4', description: '海量漫画资源' },
-    { id: 5, name: '知音漫客', url: 'https://www.zymk.cn/', icon: 'fas fa-star', color: '#FFE66D', description: '原创漫画平台' },
-    { id: 6, name: '网易漫画', url: 'https://manhua.163.com/', icon: 'fab fa-cloud', color: '#00C514', description: '网易旗下漫画平台' },
-    { id: 7, name: '有妖气', url: 'https://www.u17.com/', icon: 'fas fa-ghost', color: '#9B59B6', description: '原创漫画社区' },
-    { id: 8, name: '咚漫', url: 'https://www.dongmanmanhua.cn/', icon: 'fas fa-drum', color: '#E74C3C', description: '韩国漫画平台' },
-    { id: 9, name: 'PODO漫画', url: 'https://www.podo.kr/', icon: 'fas fa-feather', color: '#3498DB', description: '优质海外漫画' },
-    { id: 10, name: '漫画岛', url: 'https://www.manhuadao.com/', icon: 'fas fa-island', color: '#2ECC71', description: '全彩漫画平台' },
-    { id: 11, name: '爱漫画', url: 'https://www.imanhua.com/', icon: 'fas fa-heart', color: '#E91E63', description: '免费漫画资源' },
-    { id: 12, name: '风车动漫', url: 'https://www.fengchedm.com/', icon: 'fas fa-wind', color: '#FF9800', description: '漫画动画综合' },
-    { id: 13, name: '漫画屋', url: 'https://www.manhuawu.com/', icon: 'fas fa-home', color: '#607D8B', description: '精品漫画屋' },
-    { id: 14, name: '漫客栈', url: 'https://www.mkzhan.com/', icon: 'fas fa-store', color: '#7C4DFF', description: '国漫平台' },
-    { id: 15, name: '动漫之家', url: 'https://www.dmzj.com/', icon: 'fas fa-home', color: '#00BCD4', description: '老牌漫画网站' },
-    { id: 16, name: 'SF轻小说', url: 'https://www.sfacg.com/', icon: 'fas fa-book', color: '#FF5722', description: '小说漫画综合' }
+    { id: 1, name: '腾讯动漫', url: 'https://ac.qq.com/', searchUrl: 'https://ac.qq.com/search/index?keyword=', icon: 'fab fa-tencent-weibo', color: '#1DA4F2', description: '正版漫画平台' },
+    { id: 2, name: '快看漫画', url: 'https://www.kuaikanmanhua.com/', searchUrl: 'https://www.kuaikanmanhua.com/search?keyword=', icon: 'fas fa-eye', color: '#FF6B6B', description: '热门漫画聚集地' },
+    { id: 3, name: '哔哩哔哩漫画', url: 'https://manga.bilibili.com/', searchUrl: 'https://manga.bilibili.com/search?keyword=', icon: 'fab fa-bilibili', color: '#FB7299', description: '二次元漫画社区' },
+    { id: 4, name: '漫画台', url: 'https://www.manhuatai.com/', searchUrl: 'https://www.manhuatai.com/search.aspx?key=', icon: 'fas fa-book-open', color: '#4ECDC4', description: '海量漫画资源' },
+    { id: 5, name: '知音漫客', url: 'https://www.zymk.cn/', searchUrl: 'https://www.zymk.cn/search/index?keyword=', icon: 'fas fa-star', color: '#FFE66D', description: '原创漫画平台' },
+    { id: 6, name: '网易漫画', url: 'https://manhua.163.com/', searchUrl: 'https://manhua.163.com/search?keyword=', icon: 'fab fa-cloud', color: '#00C514', description: '网易旗下漫画平台' },
+    { id: 7, name: '有妖气', url: 'https://www.u17.com/', searchUrl: 'https://www.u17.com/search/index.htm?keyword=', icon: 'fas fa-ghost', color: '#9B59B6', description: '原创漫画社区' },
+    { id: 8, name: '咚漫', url: 'https://www.dongmanmanhua.cn/', searchUrl: 'https://www.dongmanmanhua.cn/search?keyword=', icon: 'fas fa-drum', color: '#E74C3C', description: '韩国漫画平台' },
+    { id: 9, name: 'PODO漫画', url: 'https://www.podo.kr/', searchUrl: 'https://www.podo.kr/search?keyword=', icon: 'fas fa-feather', color: '#3498DB', description: '优质海外漫画' },
+    { id: 10, name: '漫画岛', url: 'https://www.manhuadao.com/', searchUrl: 'https://www.manhuadao.com/search/?keyword=', icon: 'fas fa-island', color: '#2ECC71', description: '全彩漫画平台' },
+    { id: 11, name: '爱漫画', url: 'https://www.imanhua.com/', searchUrl: 'https://www.imanhua.com/search.php?keyword=', icon: 'fas fa-heart', color: '#E91E63', description: '免费漫画资源' },
+    { id: 12, name: '风车动漫', url: 'https://www.fengchedm.com/', searchUrl: 'https://www.fengchedm.com/search/?keyword=', icon: 'fas fa-wind', color: '#FF9800', description: '漫画动画综合' },
+    { id: 13, name: '漫画屋', url: 'https://www.manhuawu.com/', searchUrl: 'https://www.manhuawu.com/search/?keyword=', icon: 'fas fa-home', color: '#607D8B', description: '精品漫画屋' },
+    { id: 14, name: '漫客栈', url: 'https://www.mkzhan.com/', searchUrl: 'https://www.mkzhan.com/search?keyword=', icon: 'fas fa-store', color: '#7C4DFF', description: '国漫平台' },
+    { id: 15, name: '动漫之家', url: 'https://www.dmzj.com/', searchUrl: 'https://www.dmzj.com/search.html?s=', icon: 'fas fa-home', color: '#00BCD4', description: '老牌漫画网站' },
+    { id: 16, name: 'SF轻小说', url: 'https://www.sfacg.com/', searchUrl: 'https://www.sfacg.com/search?keywords=', icon: 'fas fa-book', color: '#FF5722', description: '小说漫画综合' }
 ];
 
 // 漫画分类数据
@@ -38,20 +38,20 @@ const categories = [
     { id: 16, name: '治愈', icon: 'fas fa-leaf', color: '#81C784', count: 2100 }
 ];
 
-// 热门漫画数据
+// 热门漫画数据（使用可靠的封面图片）
 const hotComics = [
-    { id: 1, title: '鬼灭之刃', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=anime%20demon%20slayer%20cover%20art%20dark%20fantasy&image_size=portrait_4_3', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第205话' },
-    { id: 2, title: '海贼王', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=one%20piece%20anime%20cover%20pirates%20adventure&image_size=portrait_4_3', sites: ['腾讯动漫', '快看漫画'], update: '更新至第1090话' },
-    { id: 3, title: '进击的巨人', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=attack%20on%20titan%20anime%20cover%20giant%20battle&image_size=portrait_4_3', sites: ['哔哩哔哩漫画'], update: '已完结' },
-    { id: 4, title: '咒术回战', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=jujutsu%20kaisen%20anime%20cover%20dark%20magic%20battle&image_size=portrait_4_3', sites: ['腾讯动漫', '快看漫画'], update: '更新至第240话' },
-    { id: 5, title: '一拳超人', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=one%20punch%20man%20anime%20cover%20hero%20action&image_size=portrait_4_3', sites: ['快看漫画', '哔哩哔哩漫画'], update: '更新至第280话' },
-    { id: 6, title: '火影忍者', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=naruto%20anime%20cover%20ninja%20village&image_size=portrait_4_3', sites: ['腾讯动漫'], update: '已完结' },
-    { id: 7, title: '全职猎人', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=hunter%20x%20hunter%20anime%20cover%20adventure&image_size=portrait_4_3', sites: ['快看漫画'], update: '更新至第390话' },
-    { id: 8, title: '死神', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=bleach%20anime%20cover%20shinigami%20sword&image_size=portrait_4_3', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第700话' },
-    { id: 9, title: '灌篮高手', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=slam%20dunk%20anime%20cover%20basketball&image_size=portrait_4_3', sites: ['快看漫画'], update: '已完结' },
-    { id: 10, title: '间谍过家家', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=spy%20family%20anime%20cover%20comedy%20spy&image_size=portrait_4_3', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第85话' },
-    { id: 11, title: '电锯人', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=chainsaw%20man%20anime%20cover%20dark%20fantasy&image_size=portrait_4_3', sites: ['哔哩哔哩漫画'], update: '更新至第150话' },
-    { id: 12, title: '东京复仇者', cover: 'https://neeko-copilot.bytedance.net/api/text_to_image?prompt=tokyo%20revengers%20anime%20cover%20gang%20time%20travel&image_size=portrait_4_3', sites: ['快看漫画', '腾讯动漫'], update: '更新至第270话' }
+    { id: 1, title: '鬼灭之刃', cover: 'https://cdn.myanimelist.net/images/manga/3/223439.jpg', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第205话' },
+    { id: 2, title: '海贼王', cover: 'https://cdn.myanimelist.net/images/manga/1/196441.jpg', sites: ['腾讯动漫', '快看漫画'], update: '更新至第1090话' },
+    { id: 3, title: '进击的巨人', cover: 'https://cdn.myanimelist.net/images/manga/2/164363.jpg', sites: ['哔哩哔哩漫画'], update: '已完结' },
+    { id: 4, title: '咒术回战', cover: 'https://cdn.myanimelist.net/images/manga/3/230467.jpg', sites: ['腾讯动漫', '快看漫画'], update: '更新至第240话' },
+    { id: 5, title: '一拳超人', cover: 'https://cdn.myanimelist.net/images/manga/1/164673.jpg', sites: ['快看漫画', '哔哩哔哩漫画'], update: '更新至第280话' },
+    { id: 6, title: '火影忍者', cover: 'https://cdn.myanimelist.net/images/manga/2/156491.jpg', sites: ['腾讯动漫'], update: '已完结' },
+    { id: 7, title: '全职猎人', cover: 'https://cdn.myanimelist.net/images/manga/3/213277.jpg', sites: ['快看漫画'], update: '更新至第390话' },
+    { id: 8, title: '死神', cover: 'https://cdn.myanimelist.net/images/manga/1/155583.jpg', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第700话' },
+    { id: 9, title: '灌篮高手', cover: 'https://cdn.myanimelist.net/images/manga/1/190441.jpg', sites: ['快看漫画'], update: '已完结' },
+    { id: 10, title: '间谍过家家', cover: 'https://cdn.myanimelist.net/images/manga/2/229777.jpg', sites: ['腾讯动漫', '哔哩哔哩漫画'], update: '更新至第85话' },
+    { id: 11, title: '电锯人', cover: 'https://cdn.myanimelist.net/images/manga/2/228567.jpg', sites: ['哔哩哔哩漫画'], update: '更新至第150话' },
+    { id: 12, title: '东京复仇者', cover: 'https://cdn.myanimelist.net/images/manga/2/230521.jpg', sites: ['快看漫画', '腾讯动漫'], update: '更新至第270话' }
 ];
 
 // 搜索建议数据
@@ -133,13 +133,12 @@ function initHotGrid() {
         grid.appendChild(card);
     });
 }
-
 // 创建热门漫画卡片
 function createHotCard(comic) {
     const card = document.createElement('div');
     card.className = 'hot-card';
     card.innerHTML = `
-        <img src="${comic.cover}" alt="${comic.title}">
+        <img src="${comic.cover}" alt="${comic.title}" onerror="this.outerHTML='<div class=\\'cover-placeholder\\' style=\\'background: linear-gradient(135deg, #667eea, #764ba2);\\'><i class=\\'fas fa-image\\'></i></div>'">
         <div class="hot-card-content">
             <h3 class="hot-card-title">${comic.title}</h3>
             <div class="hot-card-info">
@@ -149,7 +148,13 @@ function createHotCard(comic) {
     `;
     
     card.addEventListener('click', () => {
-        showSearchResults(comic.title);
+        // 直接跳转到第一个支持平台的搜索结果页面
+        const site = comicSites.find(s => comic.sites.includes(s.name));
+        if (site) {
+            const searchUrl = site.searchUrl + encodeURIComponent(comic.title);
+            addToHistory({ type: 'site', name: site.name, url: site.url });
+            window.open(searchUrl, '_blank');
+        }
     });
     
     return card;
@@ -265,47 +270,167 @@ function performSearch(query) {
 function showSearchResults(query) {
     const modal = document.getElementById('search-modal');
     const resultsContainer = document.getElementById('search-results');
+    const lowerQuery = query.toLowerCase();
     
-    const results = hotComics.filter(comic => 
-        comic.title.toLowerCase().includes(query.toLowerCase())
+    // 搜索漫画标题
+    const comicResults = hotComics.filter(comic => 
+        comic.title.toLowerCase().includes(lowerQuery)
     );
     
-    if (results.length === 0) {
+    // 搜索漫画网站
+    const siteResults = comicSites.filter(site => 
+        site.name.toLowerCase().includes(lowerQuery)
+    );
+    
+    // 搜索分类
+    const categoryResults = categories.filter(cat => 
+        cat.name.toLowerCase().includes(lowerQuery)
+    );
+    
+    if (comicResults.length === 0 && siteResults.length === 0 && categoryResults.length === 0) {
+        // 未找到结果，显示推荐漫画
         resultsContainer.innerHTML = `
-            <div class="empty-state">
-                <i class="fas fa-search"></i>
-                <p>未找到相关漫画：${query}</p>
-            </div>
-        `;
-    } else {
-        resultsContainer.innerHTML = results.map(comic => `
-            <div class="search-result-item">
-                <img src="${comic.cover}" alt="${comic.title}">
-                <div class="search-result-info">
-                    <h4 class="search-result-title">${comic.title}</h4>
-                    <div class="search-result-sites">
-                        ${comic.sites.map(site => `<span>${site}</span>`).join('')}
+            <div class="search-no-results">
+                <div class="empty-state">
+                    <i class="fas fa-search"></i>
+                    <p>未找到相关结果：${query}</p>
+                    <p style="margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.7);">试试这些热门漫画</p>
+                </div>
+                <div class="search-recommendations">
+                    <h4>热门推荐</h4>
+                    <div class="recommend-grid">
+                        ${hotComics.slice(0, 4).map(comic => `
+                            <div class="recommend-item" data-title="${comic.title}">
+                                <img src="${comic.cover}" alt="${comic.title}">
+                                <span>${comic.title}</span>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             </div>
-        `).join('');
+        `;
+        
+        // 添加推荐项点击事件
+        const recommendItems = resultsContainer.querySelectorAll('.recommend-item');
+        recommendItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                const title = item.dataset.title;
+                const comic = hotComics.find(c => c.title === title);
+                if (comic) {
+                    const site = comicSites.find(s => comic.sites.includes(s.name));
+                    if (site) {
+                        const searchUrl = site.searchUrl + encodeURIComponent(comic.title);
+                        window.open(searchUrl, '_blank');
+                    }
+                }
+                modal.classList.remove('active');
+            });
+        });
+    } else {
+        // 显示搜索结果
+        let html = '';
+        
+        // 显示漫画结果
+        if (comicResults.length > 0) {
+            html += `
+                <div class="search-section">
+                    <h4><i class="fas fa-book"></i> 漫画 (${comicResults.length})</h4>
+                    <div class="search-results-grid">
+                        ${comicResults.map(comic => `
+                            <div class="search-result-item">
+                                <img src="${comic.cover}" alt="${comic.title}">
+                                <div class="search-result-info">
+                                    <h4 class="search-result-title">${comic.title}</h4>
+                                    <div class="search-result-sites">
+                                        ${comic.sites.map(site => `<span>${site}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // 显示网站结果
+        if (siteResults.length > 0) {
+            html += `
+                <div class="search-section">
+                    <h4><i class="fas fa-globe"></i> 漫画网站 (${siteResults.length})</h4>
+                    <div class="search-sites-grid">
+                        ${siteResults.map(site => `
+                            <div class="site-card" style="background: rgba(255,255,255,0.05);">
+                                <i class="${site.icon}" style="color: ${site.color};"></i>
+                                <h3>${site.name}</h3>
+                                <p>${site.description}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // 添加网站点击事件
+            setTimeout(() => {
+                const siteCards = resultsContainer.querySelectorAll('.site-card');
+                siteCards.forEach((card, index) => {
+                    const site = siteResults[index];
+                    card.addEventListener('click', () => {
+                        window.open(site.url, '_blank');
+                        modal.classList.remove('active');
+                    });
+                });
+            }, 100);
+        }
+        
+        // 显示分类结果
+        if (categoryResults.length > 0) {
+            html += `
+                <div class="search-section">
+                    <h4><i class="fas fa-tags"></i> 分类 (${categoryResults.length})</h4>
+                    <div class="search-categories-grid">
+                        ${categoryResults.map(cat => `
+                            <div class="category-card" style="background: rgba(255,255,255,0.05);">
+                                <i class="${cat.icon}" style="color: ${cat.color};"></i>
+                                <h3>${cat.name}</h3>
+                                <p>${cat.count.toLocaleString()}部漫画</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // 添加分类点击事件
+            setTimeout(() => {
+                const categoryCards = resultsContainer.querySelectorAll('.category-card');
+                categoryCards.forEach((card, index) => {
+                    const cat = categoryResults[index];
+                    card.addEventListener('click', () => {
+                        searchComicsByCategory(cat.name);
+                    });
+                });
+            }, 100);
+        }
+        
+        resultsContainer.innerHTML = html;
     }
     
     modal.classList.add('active');
     
-    // 添加点击跳转功能
-    const resultItems = resultsContainer.querySelectorAll('.search-result-item');
-    resultItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            const comic = results[index];
-            const site = comicSites.find(s => s.name === comic.sites[0]);
-            if (site) {
-                addToHistory({ type: 'site', name: site.name, url: site.url });
-                window.open(site.url, '_blank');
-            }
-            modal.classList.remove('active');
+    // 添加漫画结果点击跳转功能
+    if (comicResults.length > 0) {
+        const resultItems = resultsContainer.querySelectorAll('.search-result-item');
+        resultItems.forEach((item, index) => {
+            const comic = comicResults[index];
+            item.addEventListener('click', () => {
+                const site = comicSites.find(s => comic.sites.includes(s.name));
+                if (site) {
+                    const searchUrl = site.searchUrl + encodeURIComponent(comic.title);
+                    window.open(searchUrl, '_blank');
+                }
+                modal.classList.remove('active');
+            });
         });
-    });
+    }
 }
 
 // 按分类搜索
@@ -313,13 +438,32 @@ function searchComicsByCategory(category) {
     const modal = document.getElementById('search-modal');
     const resultsContainer = document.getElementById('search-results');
     
-    resultsContainer.innerHTML = `
-        <div class="empty-state">
-            <i class="fas fa-tags"></i>
-            <p>"${category}"分类漫画</p>
-            <p style="margin-top: 10px;">正在搜索各大漫画网站...</p>
+    // 显示分类搜索结果（显示热门漫画作为推荐）
+    resultsContainer.innerHTML = hotComics.slice(0, 6).map(comic => `
+        <div class="search-result-item">
+            <img src="${comic.cover}" alt="${comic.title}">
+            <div class="search-result-info">
+                <h4 class="search-result-title">${comic.title}</h4>
+                <div class="search-result-sites">
+                    ${comic.sites.map(site => `<span>${site}</span>`).join('')}
+                </div>
+            </div>
         </div>
-    `;
+    `).join('');
+    
+    // 添加点击跳转功能
+    const resultItems = resultsContainer.querySelectorAll('.search-result-item');
+    resultItems.forEach((item, index) => {
+        const comic = hotComics[index];
+        item.addEventListener('click', () => {
+            const site = comicSites.find(s => comic.sites.includes(s.name));
+            if (site) {
+                const searchUrl = site.searchUrl + encodeURIComponent(comic.title);
+                window.open(searchUrl, '_blank');
+            }
+            modal.classList.remove('active');
+        });
+    });
     
     modal.classList.add('active');
 }
@@ -346,7 +490,7 @@ function initNavigation() {
     
     // 关闭弹窗
     const modal = document.getElementById('search-modal');
-    const closeBtn = document.getElementById('modal-close');
+    const closeBtn = document.getElementById('search-modal-close');
     
     closeBtn.addEventListener('click', () => {
         modal.classList.remove('active');
