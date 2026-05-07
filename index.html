@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画聚合 - 一站式漫画导航</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>漫画聚合</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#sites" class="nav-link">漫画网站</a>
+                <a href="#categories" class="nav-link">分类</a>
+                <a href="#hot" class="nav-link">热门推荐</a>
+                <a href="#my" class="nav-link" id="my-nav-link">
+                    <i class="fas fa-user"></i>
+                    我的
+                </a>
+            </nav>
+            <div class="user-area">
+                <button class="login-btn" id="login-btn">
+                    <i class="fas fa-user-circle"></i>
+                    登录
+                </button>
+                <div class="user-info" id="user-info" style="display: none;">
+                    <img src="" alt="" class="avatar" id="user-avatar">
+                    <span class="username" id="username"></span>
+                    <div class="user-dropdown">
+                        <a href="#my" onclick="showMySection()">
+                            <i class="fas fa-user"></i> 个人中心
+                        </a>
+                        <a href="#" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> 退出登录
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" id="main-content">
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>发现精彩漫画世界</h1>
+                    <p>集成各大漫画网站，一键直达心仪漫画</p>
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="搜索漫画名称...">
+                        <button id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">100+</span>
+                            <span class="stat-label">漫画网站</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">10万+</span>
+                            <span class="stat-label">漫画资源</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">500万+</span>
+                            <span class="stat-label">月访问量</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sites" class="sites-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-globe"></i>
+                    漫画网站导航
+                </h2>
+                <div class="sites-grid" id="sites-grid"></div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-tags"></i>
+                    漫画分类
+                </h2>
+                <div class="categories-grid" id="categories-grid"></div>
+            </div>
+        </section>
+
+        <section id="hot" class="hot-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-fire"></i>
+                    热门漫画推荐
+                </h2>
+                <div class="hot-grid" id="hot-grid"></div>
+            </div>
+        </section>
+
+        <section id="my" class="my-section" style="display: none;">
+            <div class="container">
+                <div class="my-header">
+                    <div class="my-profile">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=default" alt="avatar" class="my-avatar" id="my-avatar">
+                        <div class="my-info">
+                            <h2 id="my-username">未登录用户</h2>
+                            <p id="my-email">登录后享受更多服务</p>
+                        </div>
+                    </div>
+                    <div class="my-stats">
+                        <div class="my-stat-item">
+                            <span class="my-stat-num" id="favorites-count">0</span>
+                            <span class="my-stat-label">收藏</span>
+                        </div>
+                        <div class="my-stat-item">
+                            <span class="my-stat-num" id="history-count">0</span>
+                            <span class="my-stat-label">历史</span>
+                        </div>
+                        <div class="my-stat-item">
+                            <span class="my-stat-num" id="downloads-count">0</span>
+                            <span class="my-stat-label">下载</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-tabs">
+                    <button class="my-tab active" data-tab="favorites">
+                        <i class="fas fa-heart"></i>
+                        我的收藏
+                    </button>
+                    <button class="my-tab" data-tab="history">
+                        <i class="fas fa-history"></i>
+                        浏览历史
+                    </button>
+                    <button class="my-tab" data-tab="downloads">
+                        <i class="fas fa-download"></i>
+                        下载管理
+                    </button>
+                </div>
+
+                <div class="my-content">
+                    <div class="tab-content active" id="favorites-content">
+                        <div class="comic-list" id="favorites-list">
+                            <div class="empty-state">
+                                <i class="fas fa-heart"></i>
+                                <p>暂无收藏内容</p>
+                                <span>在漫画详情页点击收藏按钮添加</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="history-content">
+                        <div class="comic-list" id="history-list">
+                            <div class="empty-state">
+                                <i class="fas fa-history"></i>
+                                <p>暂无浏览记录</p>
+                                <span>访问漫画网站后会自动记录</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="downloads-content">
+                        <div class="download-list" id="download-list">
+                            <div class="empty-state">
+                                <i class="fas fa-download"></i>
+                                <p>暂无下载记录</p>
+                                <span>在漫画网站下载的内容会显示在这里</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 漫画聚合 - 一站式漫画导航</p>
+                <p>本站仅提供导航服务，漫画内容版权归原网站所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-sign-in-alt"></i>
+                    登录
+                </h3>
+                <button class="modal-close" id="login-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="login-body">
+                <div class="login-methods">
+                    <button class="login-method-btn" data-method="wechat">
+                        <i class="fab fa-weixin"></i>
+                        <span>微信登录</span>
+                    </button>
+                    <button class="login-method-btn" data-method="qq">
+                        <i class="fab fa-qq"></i>
+                        <span>QQ登录</span>
+                    </button>
+                    <button class="login-method-btn" data-method="phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>手机号登录</span>
+                    </button>
+                </div>
+
+                <div class="login-form-container">
+                    <!-- 手机号登录表单 -->
+                    <div class="login-form" id="phone-login-form" style="display: none;">
+                        <div class="form-group">
+                            <div class="phone-input-group">
+                                <select class="country-code">
+                                    <option value="+86">+86 中国</option>
+                                    <option value="+852">+852 香港</option>
+                                    <option value="+853">+853 澳门</option>
+                                    <option value="+886">+886 台湾</option>
+                                </select>
+                                <input type="tel" id="phone-number" placeholder="请输入手机号" maxlength="11">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="code-input-group">
+                                <input type="text" id="verify-code" placeholder="请输入验证码" maxlength="6">
+                                <button class="send-code-btn" id="send-code-btn">获取验证码</button>
+                            </div>
+                        </div>
+                        <button class="login-submit-btn" id="phone-login-btn">登录</button>
+                    </div>
+
+                    <!-- 微信扫码区域 -->
+                    <div class="qrcode-area" id="wechat-qrcode" style="display: none;">
+                        <div class="qrcode-box">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=wechat-login-demo" alt="微信扫码">
+                        </div>
+                        <p>请使用微信扫描二维码登录</p>
+                    </div>
+
+                    <!-- QQ扫码区域 -->
+                    <div class="qrcode-area" id="qq-qrcode" style="display: none;">
+                        <div class="qrcode-box">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=qq-login-demo" alt="QQ扫码">
+                        </div>
+                        <p>请使用QQ扫描二维码登录</p>
+                    </div>
+                </div>
+
+                <div class="login-footer">
+                    <label class="agree-terms">
+                        <input type="checkbox" id="agree-terms">
+                        <span>我已阅读并同意</span>
+                        <a href="#">《用户协议》</a>
+                        <span>和</span>
+                        <a href="#">《隐私政策》</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 搜索结果弹窗 -->
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-search"></i>
+                    搜索结果
+                </h3>
+                <button class="modal-close" id="search-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- 漫画详情弹窗 -->
+    <div id="comic-modal" class="modal">
+        <div class="modal-content comic-detail-modal">
+            <div class="modal-header">
+                <h3 id="comic-detail-title">漫画详情</h3>
+                <button class="modal-close" id="comic-modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="comic-detail-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
